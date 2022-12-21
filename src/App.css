@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Karla:wght@700&display=swap');
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Karla', sans-serif;
+  width: 100%;
+  min-height: 100%;
+  background-color: #F5F7FB;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  position: relative;
+}
+
+.main {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-header {
+  color: #293264;
+  font-weight: 700;
+  margin: 0;
+}
+
+.main-text {
+  font-family: 'Inter', sans-serif;
+  color: #293264;
+}
+
+.main-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #F5F7FB;
+  background-color: #293264;
+  border: none;
+  width: 193px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.blob {
+  position: absolute;
+  z-index: -1;
+}
+
+.top-right {
+  top: 0;
+  right: 0px;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+/* Design of Question container */
+
+.container {
+  border-bottom: 1px solid #DBDEF0;
+  padding-left: 20px
+}
+
+.container-header {
+   font-weight: 700;
+   color: #293264;
+   font-size: 16px;
+}
+
+.container-button {
+  border: 1px solid #4D5B9E;
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+  color: #293264;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 15px;
+  padding: 6px 22px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.container-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.clicked {
+  border: 1px solid #D6DBF5;
+  background-color: #D6DBF5;
+}
+
+.correct {
+  border: 1px solid #94D7A2;
+  background-color: #94D7A2
+}
+
+.wrong {
+  border: 1px solid #F8BCBC;
+  background-color: #F8BCBC;
+  opacity: 40%;
+}
+
+.disable {
+  border: 1px solid #293264;
+  background-color: #F5F7FB;
+  opacity: 50%;
+}
+
+/* Design of "game results" and buttons */
+
+.button {
+  font-weight: 600;
+  background-color: #4D5B9E;
   color: white;
+  border: 1px solid #4D5B9E;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 12px 23px;
 }
 
-.App-link {
-  color: #61dafb;
+.check {
+  display: flex;
+  margin: 30px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.disabled {
+  opacity: 50%;
+}
+
+.game-results {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+
+}
+
+.text-results {
+  margin: auto;
 }
